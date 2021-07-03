@@ -90,7 +90,7 @@ class Clientes(Api, Resource):
         try:
             body = request.json
 
-            cliente = Cliente(clientes_db[-1].get_id(), body['nome'], body['codigo'], body['cpf'], 'pessoa fisica')
+            cliente = Cliente(clientes_db[-1].get_id(), body['nome'], body['codigo'], body['cpf'], 'fisica')
             clientes_db.append(cliente)
             cliente_json = objeto_json(cliente)
 
